@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Test Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">TestSite</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-pressed="false" type="button">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="6"></line>
+            <line x1="12" y1="18" x2="12" y2="22"></line>
+            <line x1="2" y1="12" x2="6" y2="12"></line>
+            <line x1="18" y1="12" x2="22" y2="12"></line>
+            <line x1="4.5" y1="4.5" x2="7.5" y2="7.5"></line>
+            <line x1="16.5" y1="16.5" x2="19.5" y2="19.5"></line>
+            <line x1="4.5" y1="19.5" x2="7.5" y2="16.5"></line>
+            <line x1="16.5" y1="7.5" x2="19.5" y2="4.5"></line>
+          </svg>
+        </span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 1 0 11.5 11.5z"></path>
+          </svg>
+        </span>
+        <span class="theme-label">Dark Mode</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+        Menu
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="mobileThemeToggle" aria-pressed="false" type="button">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="6"></line>
+            <line x1="12" y1="18" x2="12" y2="22"></line>
+            <line x1="2" y1="12" x2="6" y2="12"></line>
+            <line x1="18" y1="12" x2="22" y2="12"></line>
+            <line x1="4.5" y1="4.5" x2="7.5" y2="7.5"></line>
+            <line x1="16.5" y1="16.5" x2="19.5" y2="19.5"></line>
+            <line x1="4.5" y1="19.5" x2="7.5" y2="16.5"></line>
+            <line x1="16.5" y1="7.5" x2="19.5" y2="4.5"></line>
+          </svg>
+        </span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 1 0 11.5 11.5z"></path>
+          </svg>
+        </span>
+        <span class="theme-label">Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <div>
+          <h1>Build Your First Responsive Site</h1>
+          <p>
+            This is a clean and beginner-friendly example using only HTML, CSS, and JavaScript.
+          </p>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-card">
+          <h2>Quick Highlights</h2>
+          <ul>
+            <li>Responsive layout</li>
+            <li>Simple navigation</li>
+            <li>Basic form</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          This demo website is perfect for practicing layouts and structure. The code is kept
+          simple and easy to read, so you can learn the basics quickly.
+        </p>
+        <div class="about-grid">
+          <div class="about-box">
+            <h3>Clean Design</h3>
+            <p>Minimal colors, clear spacing, and easy-to-read text.</p>
+          </div>
+          <div class="about-box">
+            <h3>Responsive</h3>
+            <p>Looks good on mobile, tablet, and desktop screens.</p>
+          </div>
+          <div class="about-box">
+            <h3>Beginner Friendly</h3>
+            <p>Short sections with simple HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Fill out the form below and we will get back to you.</p>
+        <form class="contact-form" id="contactForm">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="Your email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 TestSite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
