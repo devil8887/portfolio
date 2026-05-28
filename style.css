@@ -206,6 +206,10 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
+.contact-box .btn {
+  margin-top: 25px;
+}
+
 footer {
   text-align: center;
   padding: 25px;
