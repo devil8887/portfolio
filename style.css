@@ -1,258 +1,176 @@
-:root {
-  --bg: #f6f7fb;
-  --text: #1f2933;
-  --muted: #5b6b7a;
-  --primary: #1d4ed8;
-  --card: #ffffff;
-  --border: #e2e8f0;
-}
-
-body[data-theme="dark"] {
-  --bg: #0f172a;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --primary: #60a5fa;
-  --card: #111827;
-  --border: #1f2937;
-}
-
-* {
-  box-sizing: border-box;
+{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text);
-  background: var(--bg);
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
   line-height: 1.6;
-  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .container {
-  width: min(1100px, 92%);
-  margin: 0 auto;
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
 }
 
-.site-header {
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
+header {
   position: sticky;
   top: 0;
-  z-index: 10;
-}
-
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  gap: 16px;
-}
-
-.logo {
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 1.2rem;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
 
 .nav {
   display: flex;
-  gap: 16px;
-}
-
-.nav a,
-.mobile-nav a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-}
-
-.theme-toggle {
-  display: inline-flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  border: 1px solid var(--border);
-  background: transparent;
-  padding: 6px 12px;
-  border-radius: 6px;
-  color: var(--text);
-  cursor: pointer;
+  padding: 20px 0;
 }
 
-.theme-toggle svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.logo {
+  color: #38bdf8;
 }
 
-.theme-icon-moon {
-  display: none;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
 }
 
-body[data-theme="dark"] .theme-icon-sun {
-  display: none;
-}
-
-body[data-theme="dark"] .theme-icon-moon {
-  display: inline-block;
-}
-
-.menu-toggle {
-  display: none;
-  border: 1px solid var(--border);
-  background: transparent;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  padding: 12px 0 16px;
-  border-top: 1px solid var(--border);
-}
-
-.site-header,
-.hero-card,
-.about-box,
-.contact-form input,
-.contact-form textarea,
-.site-footer {
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+nav a:hover {
+  color: #38bdf8;
 }
 
 .hero {
-  padding: 60px 0;
-  background: linear-gradient(120deg, #eff6ff, #ffffff);
-}
-
-body[data-theme="dark"] .hero {
-  background: linear-gradient(120deg, #0b1220, #111827);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  color: var(--muted);
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: #ffffff;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.hero-card {
-  background: var(--card);
-  border-radius: 12px;
-  padding: 24px;
-  border: 1px solid var(--border);
-}
-
-.hero-card ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.about,
-.contact {
-  padding: 50px 0;
-}
-
-.about h2,
-.contact h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.about p,
-.contact p {
-  color: var(--muted);
-  margin-bottom: 24px;
+.hero span {
+  color: #38bdf8;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+.hero h3 {
+  color: #94a3b8;
+  margin-bottom: 15px;
 }
 
-.about-box {
-  background: var(--card);
-  padding: 18px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
+.hero p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
 }
 
-.contact-form {
-  display: grid;
-  gap: 14px;
-  max-width: 520px;
+.hero-buttons {
+  display: flex;
+  gap: 15px;
 }
 
-.contact-form label {
-  display: grid;
-  gap: 6px;
+.btn {
+  background: #38bdf8;
+  color: black;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
   font-weight: 600;
+  transition: 0.3s;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-  font: inherit;
+.btn:hover {
+  transform: translateY(-3px);
 }
 
-.form-status {
-  color: var(--primary);
-  min-height: 20px;
+.secondary {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: white;
 }
 
-.site-footer {
+.hero-card,
+.card,
+.project-card,
+.contact-box {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #334155;
+}
+
+.hero-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section h2 {
   text-align: center;
-  padding: 18px 0 30px;
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #38bdf8;
 }
 
-@media (max-width: 720px) {
-  .nav {
-    display: none;
+.dark {
+  background: #111827;
+}
+
+.skills-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card,
+.project-card {
+  transition: 0.3s;
+}
+
+.card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size: 2.2rem;
   }
 
-  .theme-toggle,
-  .menu-toggle {
-    display: inline-block;
-  }
-
-  .mobile-nav.show {
-    display: flex;
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
   }
 }
